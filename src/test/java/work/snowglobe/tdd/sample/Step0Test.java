@@ -4,6 +4,7 @@ import org.junit.Test;
 import work.snowglobe.tdd.sample.vending_machine.VendingMachine;
 
 import java.io.ByteArrayInputStream;
+import java.io.IOException;
 import java.io.UnsupportedEncodingException;
 
 import static org.hamcrest.CoreMatchers.is;
@@ -26,7 +27,7 @@ public class Step0Test {
      *
      * @throws UnsupportedEncodingException
      */
-    @Test public void insertTenCoinTest() throws UnsupportedEncodingException {
+    @Test public void insertTenCoinTest() throws IOException {
         String tenCoinInputString = "10";
         VendingMachine vendingMachine = new VendingMachine(new ByteArrayInputStream(tenCoinInputString.getBytes("utf-8")));
         vendingMachine.insertCoin();
@@ -38,7 +39,7 @@ public class Step0Test {
      *
      * @throws UnsupportedEncodingException
      */
-    @Test public void insertFiftyCoinTest() throws UnsupportedEncodingException {
+    @Test public void insertFiftyCoinTest() throws IOException {
         String tenCoinInputString = "50";
         VendingMachine vendingMachine = new VendingMachine(new ByteArrayInputStream(tenCoinInputString.getBytes("utf-8")));
         vendingMachine.insertCoin();
