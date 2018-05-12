@@ -1,23 +1,24 @@
 package work.snowglobe.tdd.sample.vending_machine;
 
-import java.io.BufferedReader;
-import java.io.IOException;
-import java.io.InputStream;
-import java.io.InputStreamReader;
+import work.snowglobe.tdd.sample.Money;
 
 public class VendingMachine {
-    InputStream inputStream;
-    public VendingMachine(InputStream inputStream) {
-        this.inputStream = inputStream;
+
+    Money inputMoney;
+
+    public VendingMachine() {
     }
 
-    public void insertCoin() {
-
+    public void insertMoney(Money money) {
+        this.inputMoney = money;
     }
 
-    public Integer getCurrentMoney() throws IOException {
-        BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(inputStream));
-        String line = bufferedReader.readLine();
-        return Integer.parseInt(line);
+    public Integer getCurrentMoney() {
+        if (inputMoney == Money.TEN) {
+            return 10;
+        } else if (inputMoney == Money.FIFTY) {
+            return 50;
+        }
+        return null;
     }
 }
