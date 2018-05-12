@@ -7,7 +7,7 @@ import work.snowglobe.tdd.sample.domain.Money;
  */
 public class VendingMachine {
 
-    Integer currentMoney = 0;
+    private Integer currentMoney = 0;
 
     public VendingMachine() {
     }
@@ -18,11 +18,7 @@ public class VendingMachine {
      * @param money 挿入金額
      */
     public void insertMoney(Money money) {
-        if (money == Money.TEN) {
-            this.currentMoney += 10;
-        } else if (money == Money.FIFTY) {
-            this.currentMoney += 50;
-        }
+        this.currentMoney += money.getValue();
     }
 
     public Integer getCurrentMoney() {
