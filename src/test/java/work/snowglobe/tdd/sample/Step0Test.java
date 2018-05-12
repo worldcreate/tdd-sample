@@ -42,4 +42,11 @@ public class Step0Test {
         vendingMachine.insertMoney(Money.FIFTY);
         assertThat(vendingMachine.getCurrentMoney(), is(50));
     }
+
+    @Test public void コイン複数回挿入テスト() {
+        VendingMachine vendingMachine = new VendingMachine();
+        vendingMachine.insertMoney(Money.FIFTY);
+        vendingMachine.insertMoney(Money.FIFTY);
+        assertThat(vendingMachine.getCurrentMoney(), is(100));
+    }
 }
