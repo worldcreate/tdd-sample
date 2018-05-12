@@ -32,4 +32,16 @@ public class Step0Test {
         vendingMachine.insertCoin();
         assertThat(vendingMachine.getCurrentMoney(), is(10));
     }
+
+    /**
+     * 50円挿入テスト
+     *
+     * @throws UnsupportedEncodingException
+     */
+    @Test public void insertFiftyCoinTest() throws UnsupportedEncodingException {
+        String tenCoinInputString = "50";
+        VendingMachine vendingMachine = new VendingMachine(new ByteArrayInputStream(tenCoinInputString.getBytes("utf-8")));
+        vendingMachine.insertCoin();
+        assertThat(vendingMachine.getCurrentMoney(), is(50));
+    }
 }
