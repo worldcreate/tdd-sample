@@ -1,6 +1,7 @@
 package work.snowglobe.tdd.sample;
 
 import org.junit.Test;
+import work.snowglobe.tdd.sample.vending_machine.VendingMachine;
 
 import java.io.ByteArrayInputStream;
 import java.io.UnsupportedEncodingException;
