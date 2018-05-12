@@ -1,7 +1,10 @@
-package work.snowglobe.tdd.sample.vending_machine;
+package work.snowglobe.tdd.sample.domain.vending_machine;
 
-import work.snowglobe.tdd.sample.Money;
+import work.snowglobe.tdd.sample.domain.Money;
 
+/**
+ * 自動販売機クラス
+ */
 public class VendingMachine {
 
     Money inputMoney;
@@ -9,6 +12,11 @@ public class VendingMachine {
     public VendingMachine() {
     }
 
+    /**
+     * お金の挿入を行う
+     *
+     * @param money 挿入金額
+     */
     public void insertMoney(Money money) {
         this.inputMoney = money;
     }

@@ -1,11 +1,10 @@
 package work.snowglobe.tdd.sample;
 
 import org.junit.Test;
-import work.snowglobe.tdd.sample.vending_machine.VendingMachine;
+import work.snowglobe.tdd.sample.domain.Money;
+import work.snowglobe.tdd.sample.domain.vending_machine.VendingMachine;
 
-import java.io.ByteArrayInputStream;
 import java.io.IOException;
-import java.io.UnsupportedEncodingException;
 
 import static org.hamcrest.CoreMatchers.is;
 import static org.junit.Assert.*;
