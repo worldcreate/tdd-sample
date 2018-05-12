@@ -6,6 +6,7 @@ import work.snowglobe.tdd.sample.vending_machine.VendingMachine;
 import java.io.ByteArrayInputStream;
 import java.io.UnsupportedEncodingException;
 
+import static org.hamcrest.CoreMatchers.is;
 import static org.junit.Assert.*;
 
 
@@ -29,5 +30,6 @@ public class Step0Test {
         String tenCoinInputString = "10";
         VendingMachine vendingMachine = new VendingMachine(new ByteArrayInputStream(tenCoinInputString.getBytes("utf-8")));
         vendingMachine.insertCoin();
+        assertThat(vendingMachine.getCurrentMoney(), is(10));
     }
 }
