@@ -25,24 +25,22 @@ public class Step0Test {
     /**
      * 10円挿入テスト
      *
-     * @throws UnsupportedEncodingException
+     * @throws IOException
      */
     @Test public void insertTenCoinTest() throws IOException {
-        String tenCoinInputString = "10";
-        VendingMachine vendingMachine = new VendingMachine(new ByteArrayInputStream(tenCoinInputString.getBytes("utf-8")));
-        vendingMachine.insertCoin();
+        VendingMachine vendingMachine = new VendingMachine();
+        vendingMachine.insertMoney(Money.TEN);
         assertThat(vendingMachine.getCurrentMoney(), is(10));
     }
 
     /**
      * 50円挿入テスト
      *
-     * @throws UnsupportedEncodingException
+     * @throws IOException
      */
     @Test public void insertFiftyCoinTest() throws IOException {
-        String tenCoinInputString = "50";
-        VendingMachine vendingMachine = new VendingMachine(new ByteArrayInputStream(tenCoinInputString.getBytes("utf-8")));
-        vendingMachine.insertCoin();
+        VendingMachine vendingMachine = new VendingMachine();
+        vendingMachine.insertMoney(Money.FIFTY);
         assertThat(vendingMachine.getCurrentMoney(), is(50));
     }
 }
