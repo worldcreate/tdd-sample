@@ -9,4 +9,8 @@ public class VendingMachine {
     public void insertCoin() {
 
     }
+
+    public Integer getCurrentMoney() {
+        return 10;
+    }
 }
